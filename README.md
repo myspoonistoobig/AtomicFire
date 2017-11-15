@@ -62,6 +62,14 @@ command-line-args can be installed using the command below if I did not package 
 $ npm install command-line-args --save
 ```
 
+### Exporting Your Sites from FireFTP
+1. Open a browser that is still capable of running the legacy FireFTP.
+2. Open a new instance of FireFTP.
+3. Click the Tools menu item (it is usually located at the far right). 
+4. Choose Export... from the Tools menu.
+5. Save your FireFTP export .dat file in a location you will remember.
+6. You may optionally encrypt the passwords in your .dat file with a password. Leave this field blank or choose a password. The conversion script has support for either option.
+
 ### Usage
 1. Download or clone this project to your local computer
 2. Unzip and/or change into the directory
@@ -101,3 +109,8 @@ This script was written for FireFTP version 2.031 and FileZilla version 3.29.0. 
 Other tools may be capable of importing FileZilla import files in FileZilla's XML format. The output of this script should work for any app or script that accepts these XML files. 
 
 In the process of digging through FireFTP export and import source code I saw that it specifies arc4 (RC4) encryption routines in some places. I don't think these are generally used in the current export. It may be legacy code. Thus, there is no support in my script for the arc4 methods.
+
+**If you did not backup your FireFTP sites before Firefox automatically installed version 57:**
+Your profile and legacy extensions may still be intact. You may be able to install a Firefox fork such as [Waterfox](https://www.waterfoxproject.org/), as recommended by FireFTP's developer. Waterfox has the ability to import data from your Firefox profile. This is how I recovered my site data. Waterfox pulled in my old profile and all of my saved FireFTP sites. From Waterfox I was able to export my FireFTP sites for conversion. See the FireFTP export instructions above if you are unfamiliar with the process.
+
+If Waterfox or another Firefox derivative is unable to load your profile and legacy extensions, a partial file containing your site data may still be available in your old profile directory. More information for finding your profile location can be found at [https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile](https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile). In your profile folder there may be a file named fireFTPsites.dat. This file does not contain any stored password information but it may hold your other site data and credentials still.

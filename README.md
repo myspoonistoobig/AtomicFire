@@ -71,9 +71,26 @@ $ npm install command-line-args --save
 6. You may optionally encrypt the passwords in your .dat file with a password. Leave this field blank or choose a password. The conversion script has support for either option.
 
 ### Usage
-1. Download or clone this project to your local computer
-2. Unzip and/or change into the directory
-3. Run this script `node index.js` with the command line arguments below.
+1. Download or clone this project to your local computer.
+
+From the command line:
+```
+$ git clone https://github.com/myspoonistoobig/AtomicFire.git
+```
+
+2. Unzip and/or change into the directory.
+
+From the command line:
+```
+cd AtomicFire
+```
+
+3. Run this script.
+
+From the command line:
+```node index.js```
+
+Use the command line arguments below.
 
 `-i [path to your fireFTPsites.dat file]` or `--infile [path to your fireFTPsites.dat file]`
 

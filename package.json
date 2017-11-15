@@ -1,0 +1,31 @@
+{
+  "name": "atomicfire",
+  "version": "1.0.0",
+  "description": "This script is designed to help you convert FireFTP export files into FileZilla Site Manager import files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myspoonistoobig/AtomicFire.git"
+  },
+  "keywords": [
+    "FireFTP",
+    "Firefox",
+    "Waterfox",
+    "FileZilla",
+    "import",
+    "export",
+    "FTP"
+  ],
+  "author": "John Hedrick",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/myspoonistoobig/AtomicFire/issues"
+  },
+  "homepage": "https://github.com/myspoonistoobig/AtomicFire#readme",
+  "dependencies": {
+    "command-line-args": "^4.0.7"
+  }
+}

@@ -83,7 +83,12 @@ This option allows the script to overwrite any existing output files that may ha
 
 `-p [your password]` or `--password [your password]`
 
-If you used a password to protect your export from FireFTP you need to specify the p argument with the password used during export. No password is the default, just like the FireFTP export.
+If you used a password to protect your export from FireFTP you need to specify the p argument with the password used during export. No password is the default, just like the FireFTP export. Any special characters you have used in your password may need escaped on the command line. Use quotes around your password if you have special characters or spaces.
+
+**Usage Example:**
+```
+$ node index.js -i ~/Desktop/fireFTPsites.dat -o ~/Desktop/FileZillasites.xml -w -p "supersecretpassword1 @!"
+```
 
 The resulting output file should be ready for import into FileZilla via the File -> Import... menu.
 

@@ -82,13 +82,15 @@ $ git clone https://github.com/myspoonistoobig/AtomicFire.git
 
 From the command line:
 ```
-cd AtomicFire
+$ cd AtomicFire
 ```
 
 3. Run this script.
 
 From the command line:
-```node index.js```
+```
+$ node index.js
+```
 
 Use the command line arguments below.
 

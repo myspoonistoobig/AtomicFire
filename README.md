@@ -1,5 +1,5 @@
 # AtomicFire
-This script is designed to help you convert [FireFTP](http://fireftp.net/) export files into [FileZilla Site](https://filezilla-project.org/) Manager import files. 
+This script is designed to help you convert [FireFTP](http://fireftp.net/) export files into [FileZilla](https://filezilla-project.org/) Site Manager import files. 
 
 ### Background
 On November 14, 2017 [moz://a](https://www.mozilla.org) rolled out Firefox 57. Firefox 57 dropped support for legacy extensions. The Firefox version of [FireFTP](https://addons.mozilla.org/firefox/addon/fireftp/) is now considered a legacy extension because the developer has decided not to rewrite the extension as a [WebExtension](https://wiki.mozilla.org/WebExtensions). 

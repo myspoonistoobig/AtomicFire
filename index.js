@@ -75,7 +75,7 @@ if(!isEmpty(obj)) {
 		fzxml += '            <Protocol>' + site['protocol'] + '</Protocol>' + eOL;
 		fzxml += '            <Type>0</Type>' + eOL;
 		fzxml += '            <User>' + site['login'] + '</User>' + eOL;
-		fzxml += '            <Pass encoding="base64">' + new Buffer(site['password']).toString('base64') + '</Pass>' + eOL;
+		fzxml += '            <Pass encoding="base64">' + new Buffer(site['password'].replace(/\0/g, '')).toString('base64') + '</Pass>' + eOL;
 		fzxml += '            <Logontype>' + site['anonymous'] + '</Logontype>' + eOL;
 		fzxml += '            <TimezoneOffset>' + site['timezone'] + '</TimezoneOffset>' + eOL;
 		fzxml += '            <PasvMode>' + site['pasvmode'] + '</PasvMode>' + eOL;

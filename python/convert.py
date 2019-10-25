@@ -14,6 +14,7 @@ if __name__ == "__main__":
 	parser.add_argument('-o', '--output', action='store', dest='output_file', help='Specify a path and file name for the FileZilla XML import')
 	parser.add_argument('-k', '--key', action='store', dest='crypto_key', help='Specify the Key used to encrypt the FireFTP export')
 	parser.add_argument('-w', '--overwrite', action='store_true', dest='overwrite_output', help='Overwrite any file with the same name as the specified output file')
+	parser.add_argument('-v', '--verbose', action='store_true', dest='verbose_output', help='Be more verbose')
 	args = parser.parse_args()
 
 	# Quick configuration from command line options
@@ -32,7 +33,7 @@ if __name__ == "__main__":
 		args.output_file = os.path.join(args.output_file, 'FileZillasites.xml')
 
 	if args.crypto_key is None:
-		args.crypto_key = "\0"
+		args.crypto_key = "\0\0\0\0"
 
 	with open(args.input_file, 'r') as content_file:
 		content = content_file.read()
@@ -60,6 +61,9 @@ if __name__ == "__main__":
 			plaintext = msg.decode('utf-8').replace('\x00', '')
 			encoded_bytes = base64.b64encode(plaintext.encode("utf-8"))
 			plaintext_encoded = str(encoded_bytes, "utf-8")
+
+			if args.verbose_output:
+				print('Plaintext password:' + plaintext)
 
 			try:
 				if entry['protocol'] == "ftp":
